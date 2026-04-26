@@ -20,6 +20,7 @@ An end-to-end test automation project built with [Playwright](https://playwright
 
 ## Project Structure
 
+```text
 Playwright-E2E-with-Github-Actions-Docker-Artillery/
 ├── .github/
 │   └── workflows/
@@ -35,6 +36,7 @@ Playwright-E2E-with-Github-Actions-Docker-Artillery/
 ├── README.md                        # Project documentation
 ├── package.json                     # Project metadata and scripts
 └── package-lock.json                # Locked dependency versions
+```
 
 ---
 
