@@ -1,0 +1,10 @@
+*.png
+test-results
+*.log
+*.tmp   
+*.bak
+*.swp
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
