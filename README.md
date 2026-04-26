@@ -4,18 +4,6 @@ An end-to-end test automation project built with [Playwright](https://playwright
 
 ---
 
-# Playwright E2E with GitHub Actions, Docker & Artillery
-
-An end-to-end test automation project built with [Playwright](https://playwright.dev/) and JavaScript, targeting the [bitheap.tech](https://bitheap.tech) demo e-commerce site. This project covers a full purchase flow including authentication, cart management, and order placement. It integrates **Docker** for containerized test execution, **GitHub Actions** for CI/CD, and **Artillery** for performance/load testing.
-
----
-
-# Playwright E2E with GitHub Actions, Docker & Artillery
-
-An end-to-end test automation project built with [Playwright](https://playwright.dev/) and JavaScript, targeting the [bitheap.tech](https://bitheap.tech) demo e-commerce site. This project covers a full purchase flow including authentication, cart management, and order placement. It integrates **Docker** for containerized test execution, **GitHub Actions** for CI/CD, and **Artillery** for performance/load testing.
-
----
-
 ## Tech Stack
 
 | Tool | Purpose |
