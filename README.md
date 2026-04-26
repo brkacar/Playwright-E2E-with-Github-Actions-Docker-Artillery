@@ -23,18 +23,18 @@ An end-to-end test automation project built with [Playwright](https://playwright
 Playwright-E2E-with-Github-Actions-Docker-Artillery/
 ├── .github/
 │   └── workflows/
-│       └── node.js.yml            # GitHub Actions CI pipeline
-├── node_modules/                  # Installed dependencies
-├── playwright-report/             # HTML test reports (auto-generated)
-├── test-results/                  # Screenshots and traces for failures
+│       └── node.js.yml              # GitHub Actions CI pipeline
+├── node_modules/                    # Installed dependencies
+├── playwright-report/               # HTML test reports (auto-generated)
+├── test-results/                    # Screenshots and traces for failures
 ├── tests/
-│   ├── initial/                   # Initial / exploratory test files
-│   └── test1.spec.js              # Main Playwright E2E test
-├── .gitignore                     # Git ignore rules
-├── Dockerfile                     # Docker image definition
-├── README.md                      # Project documentation
-├── package.json                   # Project metadata and scripts
-└── package-lock.json              # Locked dependency versions
+│   ├── initial/                     # Initial / exploratory test files
+│   └── test1.spec.js                # Main Playwright E2E test
+├── .gitignore                       # Git ignore rules
+├── Dockerfile                       # Docker image definition
+├── README.md                        # Project documentation
+├── package.json                     # Project metadata and scripts
+└── package-lock.json                # Locked dependency versions
 
 ---
 
