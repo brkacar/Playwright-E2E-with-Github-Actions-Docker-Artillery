@@ -1,5 +1,6 @@
 *.png
 test-results
+node_modules
 *.log
 *.tmp   
 *.bak
