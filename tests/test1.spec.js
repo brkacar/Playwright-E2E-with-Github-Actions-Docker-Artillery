@@ -13,6 +13,12 @@ test.describe('My Test Suite', () => {
   });
 });
 
+/*
+        Environment Variables are set in terminal before running the test:
+        set USERNAME=playwright
+        set PASSWORD=playwright
+*/
+
 async function Login(page) {
     await page.goto('https://bitheap.tech');
     await page.click('#menu-item-2330'); // Clicks the login menu item    
@@ -20,7 +26,7 @@ async function Login(page) {
     await page.locator('input[name="xoo-el-password"]').fill(process.env.PASSWORD);
     await page.click('.xoo-el-login-btn');
     const text = await page.locator('#menu-item-2333>a').textContent();
-    const expectedMessage = "Hello, " + process.env.USERNAME.charAt(0).toUpperCase() + process.env.USERNAME.slice(1).toLowerCase();
+    const expectedMessage = "Hello, Playwright";
     if (text != expectedMessage) {
         console.error("The authentication failed. Expected " + expectedMessage + "' but got '" + text + "'");
     }
@@ -40,5 +46,5 @@ async function placeOrder(page) {
   await page.locator('xpath=//*[@id="billing_postcode"]').fill('0123');
   await page.locator('css=#billing_city').fill('Zurich');
   await page.click('#place_order');
-  expect(await page.getByText('Order received').count()).toBe(1);
+  await expect(page.getByText('Order received')).toBeVisible();
 }
