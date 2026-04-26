@@ -3,7 +3,7 @@ const config = {
   use: {
     screenshot: 'only-on-failure',
     browserName: 'firefox',
-    headless: false 
+    headless: true 
   },
 };
 
