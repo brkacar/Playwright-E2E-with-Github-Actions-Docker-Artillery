@@ -1,0 +1,32 @@
+diff --git a/node_modules/auto-playwright/dist/createActions.js b/node_modules/auto-playwright/dist/createActions.js
+index d8b85f1..b6159ce 100644
+--- a/node_modules/auto-playwright/dist/createActions.js
++++ b/node_modules/auto-playwright/dist/createActions.js
+@@ -607,15 +607,24 @@ const createActions = (page) => {
+                         description: "CSS selector to locate the <select> element directly, e.g., '#my-select' or 'form select'.",
+                     },
+                     value: {
+-                        type: ["string", "array"],
++                        oneOf: [
++                            { type: "string" },
++                            { type: "array", items: { type: "string" } }
++                        ],
+                         description: "Select options with matching value attribute. Can be a string or an array for multi-select.",
+                     },
+                     label: {
+-                        type: ["string", "array"],
++                        oneOf: [
++                            { type: "string" },
++                            { type: "array", items: { type: "string" } }
++                        ],
+                         description: "Select options with matching visible text. Can be a string or an array for multi-select.",
+                     },
+                     index: {
+-                        type: ["number", "array"],
++                        oneOf: [
++                            { type: "number" },
++                            { type: "array", items: { type: "number" } }
++                        ],
+                         description: "Select options by their index (zero-based). Can be a number or an array for multi-select.",
+                     },
+                 },

@@ -1,5 +1,4 @@
 *.png
-test-results
 node_modules
 *.log
 *.tmp   
@@ -8,3 +7,4 @@ node_modules
 .DS_Store
 .idea/
 .vscode/
+.env
