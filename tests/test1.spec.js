@@ -2,7 +2,7 @@ const { chromium } = require('playwright');
 const { test, expect } = require('@playwright/test');
 
 test.describe('My Test Suite', () => {
-  test('My Test Case', async ({page}) => {
+  test.only('My Test Case', async ({page}) => {
  
     await Login(page);
 

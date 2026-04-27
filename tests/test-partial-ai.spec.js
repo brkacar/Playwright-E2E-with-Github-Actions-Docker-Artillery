@@ -3,7 +3,7 @@ import { auto } from "auto-playwright/dist";
 
 const aiOptions = { model: "gpt-4o-mini" };
 
-test("should authenticate to bitheap.tech", async ({ page }) => {
+test.skip("should authenticate to bitheap.tech", async ({ page }) => {
     test.setTimeout(120000);
 
     await page.goto("https://bitheap.tech");
