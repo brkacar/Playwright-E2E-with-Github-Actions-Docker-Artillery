@@ -32,3 +32,14 @@ test.skip("should authenticate to bitheap.tech", async ({ page }) => {
     );
     expect(registrationSuccess).toBe(true);
 });
+
+test.beforeEach(async ({ page }) => {
+  await page.context().addCookies([
+    {
+      name: 'cookieconsent_status',  // adjust cookie name to match the site
+      value: 'allow',
+      domain: 'bitheap.tech',
+      path: '/',
+    }
+  ]);
+});

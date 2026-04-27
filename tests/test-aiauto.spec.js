@@ -24,3 +24,14 @@ test.skip("should authenticate to bitheap.tech", async ({ page }) => {
     await auto("Assert if there is 'Hello, Playwright' link text",{ page, test },aiOptions);
     
 });
+
+test.beforeEach(async ({ page }) => {
+  await page.context().addCookies([
+    {
+      name: 'cookieconsent_status',  // adjust cookie name to match the site
+      value: 'allow',
+      domain: 'bitheap.tech',
+      path: '/',
+    }
+  ]);
+});

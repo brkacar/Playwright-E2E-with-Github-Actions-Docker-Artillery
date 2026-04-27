@@ -1,8 +1,15 @@
 const { chromium } = require('playwright');
 const { test, expect } = require('@playwright/test');
+const { testPhoto } = require('ai-visual-tester');
+
+/*
+        Environment Variables are set in terminal before running the test:
+        set USERNAME=playwright
+        set PASSWORD=playwright
+*/
 
 test.describe('My Test Suite', () => {
-  test.only('My Test Case', async ({page}) => {
+  test('My Test Case', async ({page}) => {
  
     await Login(page);
 
@@ -10,14 +17,21 @@ test.describe('My Test Suite', () => {
 
     await placeOrder(page);
 
+
   });
 });
 
-/*
-        Environment Variables are set in terminal before running the test:
-        set USERNAME=playwright
-        set PASSWORD=playwright
-*/
+test.beforeEach(async ({ page }) => {
+  await page.context().addCookies([
+    {
+      name: 'cookieconsent_status',  // adjust cookie name to match the site
+      value: 'allow',
+      domain: 'bitheap.tech',
+      path: '/',
+    }
+  ]);
+});
+
 
 async function Login(page) {
     await page.goto('https://bitheap.tech');
